@@ -727,6 +727,9 @@ void HotfixDatabaseConnection::DoPrepareStatements()
     // NamesReservedLocale.db2
     PrepareStatement(HOTFIX_SEL_NAMES_RESERVED_LOCALE, "SELECT ID, Name, LocaleMask FROM names_reserved_locale ORDER BY ID DESC", CONNECTION_SYNCH);
 
+    // NPCSounds.db2
+    PrepareStatement(HOTFIX_SEL_NPC_SOUNDS, "SELECT ID, hello, goodbye, pissed, ack FROM npc_sounds ORDER BY ID DESC", CONNECTION_SYNCH);
+
     // NumTalentsAtLevel.db2
     PrepareStatement(HOTFIX_SEL_NUM_TALENTS_AT_LEVEL, "SELECT ID, NumTalents, NumTalentsDeathKnight, NumTalentsDemonHunter FROM num_talents_at_level"
         " ORDER BY ID DESC", CONNECTION_SYNCH);
